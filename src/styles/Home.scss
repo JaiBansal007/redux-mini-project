@@ -1,0 +1,50 @@
+@import "colors";
+
+.home{
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    transition: all ease-out 2s;
+    padding: auto;
+    .cardproduct{
+        height: auto;
+        width: auto;
+        border-radius: 5px;
+        background-color: $tertiary;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 1rem;
+        >img{
+            height: 200px;
+            width: 200px;
+            object-fit:contain;
+            margin-bottom:1rem ;
+        }
+        >p{
+            font-size: 20px;
+            font-weight: lighter;
+            padding-bottom:7px ;
+        }
+        >h4{
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            padding-bottom: 5px;
+        }
+        button{
+            height: 5vh;
+            width: 60%;
+            font-size: 18px;
+            background-color: $secondary;
+            border-radius: 5px;
+
+        }
+
+        &:hover{
+            transform: scale(1.02);
+        }
+    }
+}
