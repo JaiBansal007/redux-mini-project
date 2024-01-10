@@ -21,7 +21,7 @@ const Header = () => {
         <Link to={"/"} element={<Home/>}>Home</Link>
         <Link to={"/cart"} element={<Cart/>}>
           <AiFillCarryOut/>
-          <p>{0}</p>
+          <p>{cartitems.length}</p>
         </Link>
       </div>
     </nav>

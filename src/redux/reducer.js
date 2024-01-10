@@ -46,7 +46,7 @@ export const cartreducer=createReducer(intial,(builder)=>{
 
     .addCase(calculateprice,(state)=>{
         let sum=0;
-        state.cartreducer.forEach((i)=>sum+=i.price+i.quantity);
+        state.cartitems.forEach((i)=>sum+=(i.price*i.quantity));
         state.subtotal=sum;
         state.shipping=state.subtotal>2000?0:200;
         state.tax=+(state.subtotal*0.18).toFixed();
