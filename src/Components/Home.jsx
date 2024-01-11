@@ -21,8 +21,8 @@ const Home = () => {
   }]
   const dispatch=useDispatch();
   const addtocart=(options)=>{
-    dispatch({type:"addtocart",payload:options});
-    dispatch({type:"calculateprice"});
+    dispatch(addtocart(options));
+    dispatch(calculateprice());
     toast.success('Add to cart');
   }
   const Card=({id,name,price,imgsrc,handler})=>(

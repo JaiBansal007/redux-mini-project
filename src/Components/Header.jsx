@@ -6,12 +6,13 @@ import Home from './Home';
 import Cart from './Cart';
 const Header = () => {
   const {cartitems}=useSelector((state)=>state.cart);
+  console.log(cartitems);
   // const [value, setvalue] = useState(0);
-  // useEffect(() => {
+  useEffect(() => {
     
-  //   setvalue(cartitems.length);
+    console.log(cartitems);
     
-  // }, [])
+  }, [])
   
   return (
     <nav>
