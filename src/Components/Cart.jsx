@@ -4,16 +4,13 @@ import { MdDelete } from "react-icons/md";
 import { useDispatch, useSelector } from 'react-redux';
 import {deleteformcart,decrement,calculateprice,addtocart} from '../redux/reducer'
 
-
 const Cart = () => {
 
   const {cartitems,subtotal,tax,shipping,total}=useSelector((state)=>state.cart);
   const dispatch=useDispatch();
-  console.log(cartitems);
   const decrementkaro=(id)=>{
     dispatch(decrement(id));
     dispatch(calculateprice());
-    toast.success("Item decreased");
   }
   const increment=(id)=>{
     dispatch(addtocart(id));
@@ -61,12 +58,12 @@ const Cart = () => {
               imgsrc={i.imgsrc}
               name={i.name}
               price={i.price}
-              id={i.id}
-              key={i.id}
-              qty={i.quantity}
+              quantity={i.quantity}
               decrement={decrementkaro}
               increment={increment}
               deletehandler={deletehandler}
+              id={i.id}
+              key={i.id}
             />
           )):<h1>No item in Cart</h1>}
         </main>
@@ -80,4 +77,5 @@ const Cart = () => {
     </>
   )
 }
+
 export default Cart
